@@ -5,7 +5,7 @@ import os.path
 import folium
 
 def process_data():
-    df_final_name = "df_final.csv"
+    df_final_name = "df_final.geojson"
     df_final = None
 
     if not os.path.isfile(df_final_name):
@@ -48,16 +48,7 @@ def process_data():
         df_final['POBLACION_MANZANA'] = np.ceil(df_final['POBLACION_MANZANA'])
 
         
-        df_final.to_csv(df_final_name, index=False)
-        
-        mapa = folium.Map(location=[df_final.geometry.centroid.y.mean(), df_final.geometry.centroid.x.mean()], zoom_start=13)
-
-        for idx, row in df_final.iterrows():
-            area_formateada = "{:.2f}".format(row['area'])
-            etiqueta = f"Barrio: {row['NOMBRE']}, Área: {area_formateada} m², Población: {row['POBLACION_MANZANA']}"
-            folium.GeoJson(row.geometry, tooltip=etiqueta).add_to(mapa)
-
-        mapa.save('mapa.html')
+        df_final.to_file(df_final_name, driver='GeoJSON')
     else:
-        df_final = pd.read_csv(df_final_name)
+        df_final = gpd.read_file(df_final_name)
     return df_final
