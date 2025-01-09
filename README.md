@@ -43,6 +43,6 @@ The project demonstrated that the current school distribution in Medellín is no
 
 ## Collaborators
 
-- [Luis Baena](https://www.github.com/alejobaenam)
 - [Camilo Bermúdez](https://www.github.com/camilobdez)
+- [Luis Baena](https://www.github.com/alejobaenam)
 - [Jesús Cantellón](https://www.github.com/JDavidCE2022)
