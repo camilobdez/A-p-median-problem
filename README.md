@@ -41,6 +41,20 @@ This project explores the application of Linear Optimization to address the capa
 ## Results
 The project demonstrated that the current school distribution in Medellín is not the best. Our proposed model offers a viable alternative, reducing the total weighted distance between students and schools.
 
+### Objective Function Evolution
+Below is a graph showing the evolution of the objective function during the optimization process:
+
+<p align="center">
+  <img src="images/Objective_function_evolution.png" alt="Objective Function Evolution" width="500">
+</p>
+
+### Proposed School Locations
+The following graph illustrates the proposed locations for schools, compared to their current distribution:
+
+<p align="center">
+  <img src="images/Proposed_locations_for_schools.png" alt="Proposed Locations for Schools" width="750">
+</p>
+
 ## Collaborators
 
 - [Camilo Bermúdez](https://www.github.com/camilobdez)
